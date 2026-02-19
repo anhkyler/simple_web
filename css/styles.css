@@ -1,0 +1,686 @@
+/* ============================================================
+   AURA NAILS - Custom Styles
+   ============================================================ */
+
+/* ======================== CUSTOM FONTS ======================== */
+@font-face {
+    font-family: 'Dream Avenue';
+    src: url('../fonts/dream-avenue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Popping';
+    src: url('../fonts/popping.black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ======================== DESIGN TOKENS ======================== */
+:root {
+    --color-olive-dark: #5C5A3E;
+    --color-beige: #E8E0D4;
+    --color-brown-dark: #4A4528;
+    --color-tan: #C4B79E;
+    --color-cream: #F5F0E8;
+    --color-text-dark: #3A3A2A;
+
+    --font-heading: 'Cormorant Garamond', 'Georgia', serif;
+    --font-body: 'Lato', 'Helvetica Neue', sans-serif;
+    --font-slogan-landing-page: 'Popping','Cormorant Garamond', 'Georgia', serif;
+    --font-heading-alt: 'Dream Avenue', 'Georgia', serif;
+
+    --section-py: 6rem;
+    --btn-radius: 50px;
+
+    --navbar-color: #f8f5f2;
+}
+
+/* ======================== BASE STYLES ======================== */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--font-slogan-landing-page);
+    color: var(--color-text-dark);
+    background-color: var(--color-cream);
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-slogan-landing-page);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-weight: 700;
+    color: var(--color-brown-dark);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ======================== UTILITY CLASSES ======================== */
+.bg-olive { background-color: var(--color-olive-dark); }
+.bg-beige { background-color: var(--color-beige); }
+.text-cream { color: var(--color-cream) !important; }
+
+.section-heading {
+    font-family: var(--font-heading-alt);
+    /* font-family: var(--font-slogan-landing-page); */
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    color: var(--color-brown-dark);
+    line-height: 1.1;
+}
+
+/* ======================== BUTTONS ======================== */
+.btn-tan {
+    background-color: var(--color-tan);
+    color: var(--color-brown-dark);
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: 0.65rem 2.2rem;
+    font-family: var(--font-slogan-landing-page);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-tan:hover {
+    background-color: #b5a88f;
+    color: var(--color-brown-dark);
+    transform: translateY(-1px);
+}
+
+.btn-dark-pill {
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+    border: none;
+    border-radius: var(--btn-radius);
+    padding: 0.65rem 2.5rem;
+    font-family: var(--font-slogan-landing-page);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-dark-pill:hover {
+    background-color: #3a3618;
+    color: var(--color-cream);
+    transform: translateY(-1px);
+}
+
+/* ======================== NAVBAR ======================== */
+#mainNav {
+    background-color: var(--navbar-color);
+    padding: 1rem 0;
+    transition: padding 0.3s ease;
+}
+
+#mainNav .navbar-brand {
+    text-decoration: none;
+}
+
+.brand-name {
+    font-family: 'Dream Avenue', var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    color: #564033;
+    display: block;
+    line-height: 1.2;
+}
+
+.brand-tagline {
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: none;
+    color: #564033;
+    opacity: 0.75;
+}
+
+#mainNav .nav-link {
+    color: #564033 !important;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+#mainNav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 1px;
+    background-color: #564033;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+#mainNav .nav-link:hover::after,
+#mainNav .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+#mainNav .nav-link.active {
+    font-weight: 700;
+}
+
+.nav-social-link {
+    color: #564033;
+    font-size: 1.2rem;
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+}
+
+.nav-social-link:hover {
+    color: #564033;
+    opacity: 0.7;
+}
+
+.navbar-toggler {
+    border: none;
+    color: #564033;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* ======================== HERO SECTION ======================== */
+#hero {
+    padding-top: calc(80px + var(--section-py));
+    padding-bottom: var(--section-py);
+    background-color: var(--color-olive-dark);
+}
+
+.hero-heading {
+    font-family: var(--font-slogan-landing-page);
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    font-weight: 700;
+    line-height: 1.05;
+    color: var(--color-cream);
+    margin-bottom: 2.5rem;
+    text-transform: none;
+}
+
+.hero-image-wrapper {
+    background-color: var(--color-tan);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ======================== SERVICES SECTION ======================== */
+#services {
+    padding: var(--section-py) 0;
+}
+
+.service-card {
+    text-align: left;
+}
+
+.service-img-wrapper {
+    background-color: var(--color-tan);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.service-img-wrapper img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-img-wrapper img {
+    transform: scale(1.03);
+}
+
+.service-title {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    margin-top: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--color-brown-dark);
+}
+
+.service-desc {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+/* ======================== ABOUT SECTION ======================== */
+#about {
+    padding: var(--section-py) 0;
+}
+
+.about-img {
+    border-radius: 6px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--color-text-dark);
+    margin-top: 1.5rem;
+}
+
+/* ======================== SOCIAL SECTION ======================== */
+#social {
+    padding: var(--section-py) 0;
+}
+
+.social-img {
+    border-radius: 6px;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.social-img:hover {
+    transform: scale(1.03);
+}
+
+.social-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-brown-dark);
+    color: var(--color-brown-dark);
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icon-link:hover {
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+    transform: translateY(-2px);
+}
+
+/* ======================== CONTACT SECTION ======================== */
+#contact {
+    padding: var(--section-py) 0;
+}
+
+.contact-intro {
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.form-label-text {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--color-text-dark);
+}
+
+.form-sublabel {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--color-text-dark);
+}
+
+.contact-input {
+    background-color: transparent;
+    border: 1px solid var(--color-brown-dark);
+    border-radius: 20px;
+    padding: 0.7rem 1rem;
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    font-size: 0.9rem;
+}
+
+.contact-input:focus {
+    background-color: transparent;
+    box-shadow: none;
+    border-color: var(--color-olive-dark);
+    border-width: 2px;
+}
+
+textarea.contact-input {
+    border-radius: 16px;
+    resize: vertical;
+}
+
+.contact-input.is-invalid {
+    border-color: #c0392b;
+}
+
+/* ======================== FOOTER ======================== */
+footer {
+    padding: 4rem 0 3rem;
+    background-color: var(--color-olive-dark);
+}
+
+.footer-brand {
+     font-family: 'Dream Avenue', var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-cream);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.footer-col-heading {
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--color-cream);
+}
+
+.footer-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--color-cream);
+    opacity: 0.85;
+}
+
+.footer-link {
+    color: var(--color-cream);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--color-cream);
+    text-decoration: underline;
+    opacity: 1;
+}
+
+/* ======================== SERVICES PAGE ======================== */
+.services-hero {
+    padding-top: calc(80px + var(--section-py));
+    padding-bottom: 3rem;
+}
+
+.services-intro {
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+.services-hero-img {
+    border-radius: 6px;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.services-menu {
+    padding: 3rem 0 var(--section-py);
+}
+
+.service-menu-card {
+    position: relative;
+}
+
+.service-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    margin-bottom: 0.75rem;
+}
+
+.badge-popular {
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+}
+
+.badge-favorite {
+    background-color: var(--color-brown-dark);
+    color: var(--color-cream);
+}
+
+.service-menu-title {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    text-transform: none;
+    letter-spacing: 0;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+}
+
+.service-menu-desc {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.service-menu-list {
+    list-style: disc;
+    padding-left: 1.2rem;
+    margin-top: 0.75rem;
+}
+
+.service-menu-list li {
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--color-text-dark);
+    line-height: 1.8;
+}
+
+.service-price-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.service-price-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--color-text-dark);
+    padding: 0.35rem 0;
+    border-bottom: 1px dotted rgba(74, 69, 40, 0.2);
+}
+
+.service-price-list li:last-child {
+    border-bottom: none;
+}
+
+.service-price-list li span:first-child {
+    padding-right: 1rem;
+}
+
+.service-price-list li span:last-child {
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.price-subheading {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* ======================== ABOUT PAGE ======================== */
+.about-hero {
+    padding-top: calc(80px + var(--section-py));
+    padding-bottom: var(--section-py);
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+.about-hero-text {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text-dark);
+    line-height: 1.8;
+    text-align: justify;
+    margin-top: 1.5rem;
+}
+
+.about-hero-img {
+    border-radius: 6px;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#aboutCarousel {
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+    .about-hero-img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .services-hero-img {
+        height: 280px;
+    }
+    .about-hero-img {
+        height: 250px;
+    }
+}
+
+/* ======================== SCROLL REVEAL ======================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ======================== RESPONSIVE ======================== */
+@media (max-width: 991.98px) {
+    :root {
+        --section-py: 4rem;
+    }
+
+    .hero-heading {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .nav-actions {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(245, 240, 232, 0.2);
+    }
+
+    #mainNav .nav-link {
+        padding: 0.6rem 0;
+    }
+
+    #mainNav .nav-link::after {
+        left: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --section-py: 3.5rem;
+    }
+
+    .section-heading {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .service-img-wrapper img {
+        height: 250px;
+    }
+
+    .about-img {
+        height: 280px;
+    }
+
+    .social-img {
+        height: 200px;
+    }
+
+    .hero-img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-heading {
+        font-size: 2rem;
+    }
+
+    .footer-brand {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-tan,
+    .btn-dark-pill {
+        padding: 0.55rem 1.8rem;
+        font-size: 0.75rem;
+    }
+}

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aura Nails - Where you come first, always!.">
+    <title>Aura Nails | Where you come first, always!</title>
+
+    <!-- Bootstrap 5.3 CSS (local) -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons (local) -->
+    <link href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ======================== NAVIGATION ======================== -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#hero">
+                <span class="brand-name">AURA NAILS</span>
+                <span class="brand-tagline d-block">Where you come first, always!</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hero">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#contact">Appointments</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-3 nav-actions">
+                    <a href="https://www.instagram.com/auranailslounge.sc" class="nav-social-link" aria-label="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/auranailslounge.sc/" class="nav-social-link" aria-label="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@auranailslounge.sc" class="nav-social-link" aria-label="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                    <a href="https://www.threads.com/@auranailslounge.sc" class="nav-social-link" aria-label="Threads">
+                         <i class="bi bi-threads"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-tan">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================== HERO SECTION ======================== -->
+    <section id="hero" class="bg-olive text-cream">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h1 class="hero-heading">Where you come first, always!</h1>
+                    <div class="hero-image-wrapper">
+                        <img src="images/image.png"
+                             alt="Aura Nails salon storefront exterior"
+                             class="img-fluid hero-img">
+                    </div>
+                    <a href="#contact" class="btn btn-tan btn-lg mt-4">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== SERVICES SECTION ======================== -->
+    <section id="services" class="bg-beige reveal">
+        <div class="container">
+            <h2 class="section-heading text-start mb-5">Exclusive Services</h2>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="images/precisioncare.png"
+                                 alt="Precision Care service" class="img-fluid">
+                        </div>
+                        <h3 class="service-title">Precision Care</h3>
+                        <p class="service-desc">Experience the art of refined nail care, where advanced techniques and expert craftsmanship come together to deliver impeccable results.</p>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="images/ColorCommand.png"
+                                 alt="Color Command service" class="img-fluid">
+                        </div>
+                        <h3 class="service-title">Color Command</h3>
+                        <p class="service-desc">The perfect color has the power to transform more than just your nails—it can shift your mood, elevate your confidence, reveal the most radiant version of yourself, and turn an ordinary day into one of those unforgettable moments where you feel effortlessly wonderful from the inside out.</p>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="service-card">
+                        <div class="service-img-wrapper">
+                            <img src="images/SignatureCraftsmanship.png"
+                                 alt="Signature Craftsmanship service" class="img-fluid">
+                        </div>
+                        <h3 class="service-title">Signature Craftsmanship</h3>
+                        <p class="service-desc">Our Signature Craftsmanship is where artistry meets precision, blending refined technique with advanced design expertise to create nails that are not only flawlessly executed but thoughtfully curated, transforming each detail into a statement of elegance, individuality, and timeless beauty.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-dark-pill btn-lg">Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== ABOUT SECTION ======================== -->
+    <section id="about" class="bg-beige reveal">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <!-- Left: Two images -->
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img src="images/eyelash.jpg"
+                                 alt="eye lash" class="img-fluid about-img">
+                        </div>
+                        <div class="col-6">
+                            <img src="images/simpledesign.jpg"
+                                 alt="3d-texture-design" class="img-fluid about-img">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right: Text -->
+                <div class="col-lg-6">
+                    <h2 class="section-heading text-start">Uncover<br>Our Story</h2>
+                    <p class="about-text">At Aura Nails Lounge, we are committed to bringing together precision, artistry, and innovation to deliver exceptional nail care and inspired designs tailored to each individual. Every detail matters — from the techniques we master to the products we select — because we believe excellence is found in the smallest touches.</p>
+                    <a href="about.html" class="btn btn-dark-pill mt-3">Our Story</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== SOCIAL SECTION ======================== -->
+    <section id="social" class="bg-beige reveal">
+        <div class="container text-center">
+            <h2 class="section-heading mb-5">Follow Us On Social</h2>
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <img src="images/Clipper.png"
+                         alt="Nail tools" class="img-fluid social-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="/images/Polish.png"
+                         alt="Nail polish bottle" class="img-fluid social-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/airbrush.jpg"
+                         alt="Salon setup" class="img-fluid social-img">
+                </div>
+                <div class="col-6 col-md-3">
+                    <img src="images/socialmedia.jpg"
+                         alt="Nail station" class="img-fluid social-img">
+                </div>
+            </div>
+            <div class="social-icons mt-5 d-flex justify-content-center gap-4">
+                <a href="https://www.instagram.com/auranailslounge.sc" class="social-icon-link" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/auranailslounge.sc/" class="social-icon-link" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://www.tiktok.com/@auranailslounge.sc" class="social-icon-link" aria-label="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a>
+                <a href="https://www.threads.com/@auranailslounge.sc" class="social-icon-link" aria-label="Threads">
+                    <i class="bi bi-threads"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== CONTACT SECTION ======================== -->
+    <section id="contact" class="bg-beige reveal">
+        <div class="container">
+            <!-- Heading row -->
+            <div class="row mb-5">
+                <div class="col-lg-5">
+                    <h2 class="section-heading text-start">Contact Us</h2>
+                </div>
+                <div class="col-lg-7 d-flex align-items-end">
+                    <p class="contact-intro">Interested in working together? Fill out some info and we will be in touch shortly. We can't wait to hear from you!</p>
+                </div>
+            </div>
+            <!-- Form -->
+            <form id="contactForm" novalidate>
+                <p class="form-label-text mb-2">Name</p>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6">
+                        <label for="firstName" class="form-label form-sublabel">First Name <span class="text-muted">(required)</span></label>
+                        <input type="text" class="form-control contact-input" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="lastName" class="form-label form-sublabel">Last Name <span class="text-muted">(required)</span></label>
+                        <input type="text" class="form-control contact-input" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="form-label form-sublabel">Email <span class="text-muted">(required)</span></label>
+                    <input type="email" class="form-control contact-input" id="email" name="email" required>
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="form-label form-sublabel">Message <span class="text-muted">(required)</span></label>
+                    <textarea class="form-control contact-input" id="message" rows="5" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-dark-pill">Send</button>
+            </form>
+            <div id="formFeedback" class="mt-3" style="display:none;"></div>
+        </div>
+    </section>
+
+    <!-- ======================== FOOTER ======================== -->
+    <footer class="bg-olive text-cream">
+        <div class="container">
+            <div class="row g-4 align-items-start">
+                <div class="col-lg-6">
+                    <span class="footer-brand">AURA NAILS</span>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-col-heading">Location</h5>
+                    <p class="footer-text">123 Main Street, Suite A<br>Your City, ST 00000</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-col-heading">Contact</h5>
+                    <p class="footer-text">
+                        <a href="mailto:auranailslounge.sc@gmail.com" class="footer-link">auranailslounge.sc@gmail.com</a><br>
+                        <a href="tel:+10000000000" class="footer-link">(000) 000-0000</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3 JS Bundle (local) -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
